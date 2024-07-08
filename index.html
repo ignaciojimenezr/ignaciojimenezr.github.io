@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/55bac4f89f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="header">
+<div id= "header">
     <div class="container">
         <nav>
             <ul>
@@ -31,7 +31,7 @@
     <div class="container">
         <div class = "row">
             <div class="about-col-1">
-                <img src = LPZ.png>
+                <img src = IMG_9685.png>
             </div>
             <div class="about-col-2">
                 <h1 class=" sub-title">About Me</h1>
@@ -84,18 +84,18 @@
                 <p><i class="fa-regular fa-paper-plane"></i>ignaciojimenezrocabado@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i>+1(619)627-9990</p>
                 <div class="social-icons">
-                    <a href = "www.linkedin.com/in/ignaciojimenezr"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href = ""><i class="fa-brands fa-github"></i></a>
+                    <a href = "https://www.linkedin.com/in/ignaciojimenezr"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href = "https://github.com/ignaciojimenezr"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="Resume Feb 2024.pdf" download class= "btn btn2">Download CV</a>
+                <a href= "Resume Feb 2024.pdf" download class = "btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-            <form name = "submit-to-google-sheet">
+                <form name = "submit-to-google-sheet">
                 <input type = "text" name = "Name" placeholder= "Your Name" required>
                 <input type = "email" name = "Email" placeholder= "Your Email" required>
                 <textarea name = "Message" rows = "6" placeholder= "Your Message"></textarea>
                 <button type = "submit" class = "btn btn2">Submit</button>
-            </form>
+                </form>
             <span id = "msg"></span>
             </div>
         </div>
@@ -123,7 +123,7 @@
 </script>
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx-dHkCYmwGRyJOxDH4guHgc8IIFNODOdbfHYWddiEdiv9zgwO8HcLe7jELFwvQehRfzQ/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwHbe10U8KBqFWo6T3edOzDgUgfCKO1ZRUxYrlVZbz3lTQzHhAN4NRrFLcrQFkDY-Fq/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
@@ -131,7 +131,7 @@
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML = "Message Sent Successfully!"
+            msg.innerHTML = "Message Sent Succesfully!"
             setTimeout(function(){
                 msg.innerHTML = ""
             },5000)
@@ -139,6 +139,6 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
-</script>
+  </script>
 </body>
 </html>
