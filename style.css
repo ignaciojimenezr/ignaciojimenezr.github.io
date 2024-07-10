@@ -38,6 +38,11 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    text-shadow: 
+    -1px -1px 0 navy, 
+    1px -1px 0 navy, 
+    -1px 1px 0 navy, 
+    1px 1px 0 navy;
 }
 nav ul li a::after{
     content: '';
@@ -54,16 +59,25 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
-    font-size:40px;
+    margin-top: 10%;
+    font-size:30px;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 navy, 
+    1px -1px 0 navy, 
+    -1px 1px 0 navy, 
+    1px 1px 0 navy; /* Border color and size */
+
 }
 .header-text h1{
-    margin-top: 20px;
+    margin-top: -5px;
     font-size:55px;
 }
+/*
 .header-text h1 span{
     color: #ff004f;
 }
+*/
 /*---------------about------------------------*/
 #about{
     padding: 80px 0;
@@ -197,6 +211,86 @@ form .bt2{
     font-size: 18px;
     margin-top:20px;
     cursor: pointer;
+}
+/*---------------CSS4SmallScreens------------------------*/
+nav i.fa-solid.fa-square-xmark{
+    display: none;
+}
+nav i.fa-solid.fa-bars{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(lpzphone.png); 
+    }
+    .header-text{
+        margin-top: 20%;
+        font-size: 20px;
+    }
+    .header-text h1{
+        margin-top: 5px;
+        font-size: 30 px;
+    }
+    nav i.fa-solid.fa-square-xmark{
+        display: block;
+        font-size: 25px;
+    }
+    nav i.fa-solid.fa-bars{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background-color: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -130px;
+        width: 130px;
+        /* w should be 200*/
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav i.fa-solid.fa-bars {
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        top: 25px;
+        right: 25px;  
+        cursor: pointer;
+    }
+    nav ul i.fa-solid.fa-square-xmark{
+        position:absolute ;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 }
 /*---------------Message Received------------------------*/
 #msg{
