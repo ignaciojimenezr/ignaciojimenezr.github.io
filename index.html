@@ -12,17 +12,20 @@
 <div id= "header">
     <div class="container">
         <nav>
-            <ul>
+            <ul id = "sidemenu">
                 <li><a href = '#header'>Home</a></li>
                 <li><a href = '#about'>About</a></li>
                 <!--<li><a href = '#'>Services</a></li>
                 <li><a href = '#'>Portfolio</a></li>-->
                 <li><a href = '#contact'>Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
         </nav>
         <div class = "header-text">
         <p>Computer Scientist</p>
-        <h1>Hi! I'm <span>Ignacio</span><br> From Bolivia </h1>
+        <h1>Hi! I'm <span>Ignacio</span> </h1>
         </div>
     </div>
 </div>
@@ -35,25 +38,26 @@
             </div>
             <div class="about-col-2">
                 <h1 class=" sub-title">About Me</h1>
-                <p> Hola, perdida
-                    Este tema es para vos, que no me llamás todavía
-                    Y dice algo como esto
-                    Ya pasé más de un mes en la cama
-                    Extrañándote a cada mañana
-                    Y ya me están matando las ganas
-                    De llamarte, a ver si aún me amas
-                    Díganle a ese tal orgullo
-                    Que se llevó algo que no es suyo
-                    Porque siempre fuiste para mí
-                    Sola para mí, te quiero decir
-                    Hola, perdida
-                    Soy yo, el examor de tu vida
-                    Volví para volver a hacerte mía
-                    Porque un amor así no se olvida
-                    Y hola, perdida
-                    Soy yo, el examor de tu vida
-                    Volví para volver a hacerte mía
-                    Porque un amor así no se olvida</p>
+                <p>Hi! My name is Ignacio, and I was born and raised in Bolivia. I'm currently a senior at San Diego State University, set to graduate in December 2025. As a computer scientist, I'm seeking an immersive software engineering internship this summer. My interests span all realms of coding, and I'm eager to dive into new challenges.
+                    <br>
+                    <br>
+                    My coursework includes:
+                    <br>
+                    <br>
+                    - Object-Oriented Programming
+                    <br>
+                    - Data Structures
+                    <br>
+                    - Computer Organization
+                    <br>
+                    - Introduction to Software Systems
+                    <br>
+                    - Algorithms
+                    <br>
+                    - Introduction to Speech Processing
+                    <br>
+                    <br>
+                    Feel free to contact me if you'd like to connect or get to know me better. I'm always open to new opportunities and conversations!</p>
 
                     <div class="tab-titles">
                         <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -61,14 +65,16 @@
                     </div>
                     <div class="tab-contents active-tab" id = "skills">
                         <ul>
-                            <li><span>Languages</span><br>English, Spanish, French(Conversational)</li>
+                            <li><span>Languages</span><br>English, Spanish, French (Conversational)</li>
                             <li><span>Programming Languages</span><br>Java, C++, Python, MIPS, HTML, CSS</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id = "education">
                         <ul>
-                            <li><span>San Diego State</span><br>Bachelor of Science in Computer Science </li>
-                            <li><span>Expected Graduation</span><br>May 2025</li>
+                            <li><span>The American International School of Bolivia</span>
+                            <br>
+                            <li><span>San Diego State</span><br>Bachelor of Science in Computer Science <br> Expected Graduation: December 2025</li>
+                            
                         </ul>
                     </div>
             </div>
@@ -119,6 +125,17 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-130px"
     }
 </script>
 
